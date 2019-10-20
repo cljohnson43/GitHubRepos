@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GitHubRepos</string>
+    <string name="enter_github_username">Enter GitHub Username</string>
+    <string name="btn_find_repos">Find Repos</string>
+</resources>
