@@ -8,4 +8,5 @@ interface RepoModelInterface {
 
 interface RepoViewInterface {
     fun displayRepos(repos: List<Repo>)
+    fun displayGetReposError()
 }

@@ -19,7 +19,7 @@ class RepoAdapter(val repos: List<Repo>) : RecyclerView.Adapter<RepoAdapter.Repo
 
     override fun onBindViewHolder(holder: RepoViewHolder, position: Int) {
         holder.tvRepoName.text = repos.get(position).name
-        holder.tvUserName.text = repos.get(position).owner.login
+        holder.tvUserName.text = repos.get(position).owner?.login
     }
 
     class RepoViewHolder(view: View) : RecyclerView.ViewHolder(view) {

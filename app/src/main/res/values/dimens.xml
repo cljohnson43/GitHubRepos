@@ -3,4 +3,5 @@
     <dimen name="username_header">120dp</dimen>
     <dimen name="spacing">8dp</dimen>
     <dimen name="double_spacing">16dp</dimen>
+    <dimen name="card_radius">4dp</dimen>
 </resources>

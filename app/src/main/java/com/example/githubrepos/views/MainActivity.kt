@@ -9,6 +9,8 @@ import com.example.githubrepos.presenters.RepoPresenter
 import com.example.githubrepos.presenters.RepoViewInterface
 import kotlinx.android.synthetic.main.activity_main.*
 
+const val REPO_KEY = "repo.key"
+
 class MainActivity : AppCompatActivity(), RepoViewInterface {
 
     val repoPresenter: RepoPresenter by lazy {
@@ -26,8 +28,17 @@ class MainActivity : AppCompatActivity(), RepoViewInterface {
         }
     }
 
+    override fun displayGetReposError() {
+        //TODO
+
+    }
+
     override fun displayRepos(repos: List<Repo>) {
+
         val fragment = ReposFragment()
+        fragment.arguments = Bundle().apply {
+            putParcelableArray(REPO_KEY, repos.toTypedArray())
+        }
         supportFragmentManager.beginTransaction().apply {
             add(R.id.fragment_container, fragment)
             // TODO: check backstack

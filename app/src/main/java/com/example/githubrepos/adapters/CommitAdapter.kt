@@ -19,8 +19,8 @@ class CommitAdapter(val commits: List<Commit>): RecyclerView.Adapter<CommitAdapt
 
     override fun onBindViewHolder(holder: CommitViewHolder, position: Int) {
         holder.apply{
-            tvCommitDate.text = commits.get(position).commit.author.date
-            tvCommitMessage.text = commits.get(position).commit.message
+            tvCommitDate.text = commits.get(position).commit?.author?.date
+            tvCommitMessage.text = commits.get(position).commit?.message
             //ivProfilePic set profile pic
         }
     }
