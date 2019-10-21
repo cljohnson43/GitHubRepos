@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_user_profile_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/user_profile_picture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_commit_message"
+        />
+
+    <TextView
+        android:id="@+id/tv_commit_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="COMMIT MESSAGE"
+        app:layout_constraintStart_toEndOf="@id/iv_user_profile_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_commit_date"
+        />
+
+    <TextView
+        android:id="@+id/tv_commit_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="COMMIT DATE"
+        app:layout_constraintStart_toStartOf="@id/tv_commit_message"
+        app:layout_constraintEnd_toEndOf="@id/tv_commit_message"
+        app:layout_constraintTop_toBottomOf="@id/tv_commit_message"
+        app:layout_constraintBottom_toBottomOf="@id/iv_user_profile_pic"
+        />
+
+
+</com.google.android.material.card.MaterialCardView>
